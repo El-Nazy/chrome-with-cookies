@@ -3,9 +3,9 @@ const fs = require("fs");
 
 (async () => {
   const browser = await puppeteer.launch({
-    executablePath: "mnt/c/Program Files (x86)/Microsoft/Edge/Application/msedge.exe", // Replace with the path to your Chrome/Chromium executable
+    // executablePath: "mnt/c/Program Files (x86)/Microsoft/Edge/Application/msedge.exe", // Replace with the path to your Chrome/Chromium executable
     headless: false, // Set to false to see the browser window
-    args: ['--no-sandbox', '--disable-setuid-sandbox']
+    // args: ['--no-sandbox', '--disable-setuid-sandbox']
   });
 
   const page = (await browser.pages())[0]
