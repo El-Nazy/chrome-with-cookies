@@ -7,7 +7,8 @@ const fs = require("fs");
     headless: false, // Set to false to see the browser window
     args: ['--no-sandbox', '--disable-setuid-sandbox']
   });
-  const page = await browser.newPage();
+
+  const page = (await browser.pages())[0]
 
   // Read cookies from a file
   const cookieData = fs.readFileSync("./cookies.txt", "utf8");
