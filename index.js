@@ -20,7 +20,7 @@ const fs = require("fs");
       return {
         domain,
         path,
-        expires,
+        expires: Number(expires),
         name,
         value,
         httpOnly: flag1 === "TRUE",
